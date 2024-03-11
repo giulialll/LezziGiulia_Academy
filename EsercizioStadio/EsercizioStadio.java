@@ -35,11 +35,40 @@ public class EsercizioStadio {
         for (int i = 0; i < personeDomeniche.size(); i++) {
             soldiDomenica.add(personeDomeniche.get(i) * 15);
         }
+        // variabile max incasso per sabato
+        int maxIncassoSabato = Integer.MIN_VALUE;
+        // variabile min incasso per sabato
+        int minIncassoSabato = Integer.MAX_VALUE;
         // scelta dell'utente, sceglie che risultato visualizzare
         String scelta = "";
         do {
             System.out.println("Cosa vuoi vedere?");
             scelta = myScan.nextLine();
+            switch (scelta) {
+                case "massimo incasso sabato":
+                    for (int i = 0; i < soldiSabato.size(); i++) {
+                        if (soldiSabato.get(i) > maxIncassoSabato) {
+                            maxIncassoSabato = soldiSabato.get(i);
+                        }
+                    }
+                    System.out.println(maxIncassoSabato);
+                    break;
+                case "minimo incasso sabato":
+                    for (int i = 0; i < soldiSabato.size(); i++) {
+                        if (soldiSabato.get(i) < minIncassoSabato) {
+                            minIncassoSabato = soldiSabato.get(i);
+                        }
+                    }
+                    System.out.println(minIncassoSabato);
+                    break;
+                case "massima affluenza sabato":
+                break;
+                case "esci":
+                System.out.println("fine, arrivederci");
+                break;
+                default:
+                    break;
+            }
         } while (!(scelta.equalsIgnoreCase("esci")));
 
     }
