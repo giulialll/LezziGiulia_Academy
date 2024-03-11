@@ -17,8 +17,8 @@ public class EsercizioStadio {
         // creazione contatore
         int counterSabato = 0;
         int counterDomenica = 0;
-        // randomizzazione persone nel sabato max 10.000 persone
-        while (counterSabato <= 10000) {
+        // randomizzazione persone nel sabato max 10.000 persone, max 100 weekend
+        while (counterSabato <= 100) {
             personeSabato.add(rand.nextInt(10000));
             counterSabato++;
         }
@@ -26,8 +26,8 @@ public class EsercizioStadio {
         for (int i = 0; i < personeSabato.size(); i++) {
             soldiSabato.add(personeSabato.get(i) * 20);
         }
-        // randomizzazione persone nella domenica max 10.000 persone
-        while (counterDomenica <= 10000) {
+        // randomizzazione persone nella domenica max 10.000 persone, max 100 weekend
+        while (counterDomenica <= 100) {
             personeDomeniche.add(rand.nextInt(10000));
             counterDomenica++;
         }
@@ -62,10 +62,10 @@ public class EsercizioStadio {
                     System.out.println(minIncassoSabato);
                     break;
                 case "massima affluenza sabato":
-                break;
+                    break;
                 case "esci":
-                System.out.println("fine, arrivederci");
-                break;
+                    System.out.println("fine, arrivederci");
+                    break;
                 default:
                     break;
             }
