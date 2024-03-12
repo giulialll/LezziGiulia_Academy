@@ -142,7 +142,7 @@ public class EsercizioStadio {
                 case "minima affluenza domenica":
                     for (int i = 0; i < personeDomeniche.size(); i++) {
                         if (personeDomeniche.get(i) < minPersoneDomenica) {
-                            minPersoneSabato = personeDomeniche.get(i);
+                            minPersoneDomenica = personeDomeniche.get(i);
                         }
                     }
                     System.out.println(minPersoneDomenica);
