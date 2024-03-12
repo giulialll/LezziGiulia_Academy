@@ -8,20 +8,15 @@ public class PiattoSpeciale {
     private final float [] prezzoPane = {2f,1.50f,1f};
     private final float [] prezzoRipieni = {1f,1.50f,2f};
     private ArrayList<String> aggiunteUtente = new ArrayList<>();
-    private final int prezzoAggiunta = 5;
-    private final int baseFissa = 1;
-
- 
-
-    public PiattoSpeciale(String[] tipiPane,String[]tipiRipieni,float[] prezzoPane,float[] prezzoRipieni,ArrayList<String> aggiunteUtente,int prezzoAggiunta,int baseFissa) {
+    private final int costiAggiuntivi = 6;
+    
+    public PiattoSpeciale(String[] tipiPane,String[]tipiRipieni,float[] prezzoPane,float[] prezzoRipieni,ArrayList<String> aggiunteUtente,int costiAggiuntivi) {
         tipiPane=this.tipiPane;
         tipiRipieni=this.tipiRipieni;
         prezzoPane=this.prezzoPane;
         prezzoRipieni=this.prezzoRipieni;
         aggiunteUtente = this.aggiunteUtente;
-        prezzoAggiunta = this.prezzoAggiunta;
-        baseFissa = this.baseFissa;
-
+        costiAggiuntivi=this.costiAggiuntivi;
     }
 
     public String[] getTipiPane() {
@@ -44,13 +39,11 @@ public class PiattoSpeciale {
         return aggiunteUtente;
     }
 
-    public int getPrezzoAggiunta() {
-        return prezzoAggiunta;
+    public int getCostiAggiuntivi() {
+        return costiAggiuntivi;
     }
 
-    public int getBaseFissa() {
-        return baseFissa;
-    }
+   
 
    
 
