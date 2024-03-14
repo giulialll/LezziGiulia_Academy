@@ -2,37 +2,31 @@ package EsercizioElettronica;
 
 public class Tablet extends DispositivoElettronico{
     private float punti;
-    private int id=1;
+    private int idDaIncrementare;
+    private int idIniziale=1;
 
-    //costruttore Tablet
-    public Tablet(String nomeApp) {
+    //costruttore Tablet,ogni volta che verrà creato un oggetto di tipoTablet
+    //l'id incrementerà di 1 e punti sarà creato randomico 
+    public Tablet(String nomeApp){
         super(nomeApp);
-        id=this.id++;
+        idDaIncrementare=this.idIniziale++;
+        punti = (float)Math.random();
     }
 
     public float getPunti() {
         return punti;
     }
 
-    public void setPunti(float punti) {
-        this.punti = punti;
+    public int getIdDaIncrementare() {
+        return idDaIncrementare;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-  
     // metodo sovrascritto con aggiunta di punti randomici
     @Override
-    public String avviaApplicazione(String nomeApp){
-        float punti = (float)Math.random();
-        System.out.println("sei sul tuo tablet e hai questi punti: "+ punti);
-        return super.avviaApplicazione(nomeApp);
+    public void avviaApplicazione(String nomeApp){
+        super.avviaApplicazione(nomeApp);
+        System.out.println("stai utilizzando un tablet");
     }
     
    

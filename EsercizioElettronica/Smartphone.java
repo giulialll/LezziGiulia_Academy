@@ -4,43 +4,37 @@ public class Smartphone extends DispositivoElettronico {
     private String username;
     private String password;
 
+    //costruttore di smartphone
+    public Smartphone(String nomeApp,String username,String password) {
+        super(nomeApp);
+        username=this.username;
+        password=this.password;
+    }
 
     public String getUsername() {
         return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    //costruttore di smartphone
-    public Smartphone(String username, String password,String nomeApp) {
-        super(nomeApp);
-        this.username = username;
-        this.password = password;
-    }
+    
 
     //metodo del login che controlla se username e password sono corretti
-    public void login(String usernameDato,String passwordData){
+    public boolean login(String usernameDato,String passwordData){
+        boolean flag=false;
         if(usernameDato.equalsIgnoreCase(username) && passwordData.equals(password)){
-            System.out.println("sei dentro");
+            flag=true;
         }
-        // da completare
+        return flag;
     }
     
-    //metodo sovrascritto di avviaApplicazione
+    //metodo sovrascritto di avviaApplicazione con login
     @Override
-    public String avviaApplicazione(String nomeApp){
-        System.out.println("stai usando lo smartphone");
-        return super.avviaApplicazione(nomeApp);
+    public void avviaApplicazione(String nomeApp){
+        super.avviaApplicazione(nomeApp);
+        System.out.println("stai usando lo smartphone e sei loggato dentro");
     }
 
     

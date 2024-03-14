@@ -8,8 +8,7 @@ public class DispositivoElettronico {
     }
 
     //metodo della classe madre che avvia l'applicazione
-    public String avviaApplicazione(String nomeApp){
-        System.out.println("l'applicazione si sta avviando e si chiama:");
-        return nomeApp;
+    public void avviaApplicazione(String nomeApp){
+        System.out.println("l'applicazione " + nomeApp + " si sta avviando");
     }
 }
